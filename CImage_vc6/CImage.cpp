@@ -875,7 +875,7 @@ CLSID CImage::FindCodecForExtension(LPCTSTR pszExtension, const Gdiplus::ImageCo
 
 	for( UINT iCodec = 0; iCodec < nCodecs; iCodec++ )
 	{
-		int nLen = wcslen(pCodecs[iCodec].FilenameExtension);
+		int nLen = wcslen(pCodecs[iCodec].FilenameExtension)+1;
 		LPWSTR pwszExtensions = new WCHAR[nLen];
 		ZeroMemory(pwszExtensions, nLen*sizeof(WCHAR));
 
